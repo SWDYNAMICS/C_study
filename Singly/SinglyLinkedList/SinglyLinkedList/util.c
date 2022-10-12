@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_SIZE 50
-NODE* createNode(int num)
+NODE* createNewNode()
 {
     NODE* head = (NODE*)malloc(sizeof(NODE));
     NODE* tail = (NODE*)malloc(sizeof(NODE));
@@ -12,10 +12,6 @@ NODE* createNode(int num)
     tail->data = 999;
 
     int index = 0;
-    while (num)
-    {
-        appendNode(head, num--);
-    }
     return head;
 }
 
@@ -44,14 +40,6 @@ void removeNextNode(NODE* target)
 
     free(rmNode);
 
-}
-
-void application(int lenth)
-{
-    //removeNextNode(head);
-    NODE* curr = createNode(10);
-    printAllList(curr);
-    freeAllList(curr);
 }
 
 void freeAllList(NODE* curr)
