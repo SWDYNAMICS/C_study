@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "util.h"
 
-void application(int lenth);
+void application();
 
 int main(void)
 {
-    application(10);
+    application();
     return 0;
 }
